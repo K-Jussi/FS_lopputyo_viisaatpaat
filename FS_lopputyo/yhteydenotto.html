@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="fi">
+<head>
+    
+    <meta charset="utf-8"><meta charset="UTF-8">
+    <meta name="description" content="lopputyö">
+    <meta name="author" content="Heidi Haapala">
+    <meta name="keywords" content="HTML">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Kiinteistöhuolto</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/mystyle.css">
+    <link href='https://fonts.googleapis.com/css?family=Bebas Neue' rel='stylesheet'>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="js/min.js"></script>
+    <script src="js/vanilla.js"></script>
+</head>
+<body class="body">
+    <header class="header"><a href="index.html"><img src="img/logo.png" alt="logo" id="logo" style="width: 160px; height: 160px;"></a></header> 
+
+  <nav class="topnav navbar-expand-sm navbar-dark">
+    <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html" ><u>Etusivu</u></a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="yhteys.html">Yhteystiedot</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="refer.html">Referenssit</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="yhteydenotto.html" style="color:#3774d0">Ota yhteyttä</a>
+            </li>   
+            
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                Kirjaudu
+              </a>
+
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="kirjautuminenAsukas.html">Asukas</a>
+                <a class="dropdown-item" href="kirjautuminenIsannoitsija.html">Isännöitsijä</a>
+                <a class="dropdown-item" href="kirjautuminenTyontekija.html">Työntekijä</a>
+              </div>
+            </li>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container-fluid">
+      <div class="container">
+        <div class=row>
+          <!-- Tässä kartta toimipisteestä -->
+          <div class="col-4-xl col-4-md col-sm" id="kartta"> 
+            <iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.openstreetmap.org/export/embed.html?bbox=24.146889746189117%2C65.84720027328649%2C24.14965242147446%2C65.84777315326544&amp;layer=mapnik&amp;marker=65.84748777241822%2C24.148271083831787" style="border: 1px solid black"></iframe><br/><small>
+            <a href="https://www.openstreetmap.org/?mlat=65.84749&amp;mlon=24.14827#map=19/65.84749/24.14827">Näytä isommalla kartalla</a></small>
+          </div>
+
+          <!-- Yhteydenottolomake -->
+          <div class="col-4-xl col-4-md col-sm" id="yhteytta">
+            <form action="yhteydenotto.php" method="post">
+              <label for="viestiid"></label><br>
+              <input type="hidden" id="viestiid" name="viestiid"><br>
+              <label for="nimi">Koko nimi*:</label><br>
+              <input type="text" id="nimi" name="nimi" placeholder="Etunimi Sukunimi"><br>
+              <label for="puhelin">Puhelin:</label><br>
+              <input type="number" id="puhelin" name="puhelin" placeholder="+358..."><br>
+              <label for="sahkoposti">Sähköposti:</label><br>
+              <input type="email" id="sahkoposti" name="sahkoposti" placeholder="malli@email.com"><br>
+              <br>
+              <p>Viesti:</p>
+              <textarea id="viesti" name="viesti"></textarea><br>
+              <input type="submit" value="Lähetä" name="submit">
+              <input type="reset" value="Tyhjennä"><br>
+            </form>
+          </div>
+
+          <div class="col-4-xl col-4-md col-sm" id="yhteytta">
+            <h3>Kiinteistöhuolto R. Autio oy</h3> 
+                Puutarhakatu 8 <br>
+                95400 Tornio<br>
+                puh. 000-1234 1234<br>
+                päivystysnumero: 000-12331233<br>
+                etunimi.sukunimi@khrautio.fi<br>
+          </div>
+        </div>   
+      </div>
+    </div>
+
+  
+
+
+  <footer class="footer">Kiinteistöhuolto R. Autio Oy    y-tunnus: 1111111-1<br>
+    <a href="tulossa.html"><img src="img/some.png" style="height: 60%"></a>
+  </footer>
+  </body>
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </html>
